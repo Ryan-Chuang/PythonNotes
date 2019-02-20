@@ -46,9 +46,11 @@
   for x in ...:
       pass
   ```  
- 8. dict和set
+ 8. dict和set  
  **dict的构成为：dic = {key: value}**  
- **dict内部存放的顺序和key放入的顺序是没有关系的**
+ **dict内部存放的顺序和key放入的顺序是没有关系的**  
+ **set不存储value，是一组key的集合，且key不能重复：se = ([1, 2, 3])**  
+ 
  
  
  
