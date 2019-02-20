@@ -23,10 +23,10 @@ def my_abs(x):
 def f1(a, b, c=0, *args, *, d, **kw):
     print('a =', a, 'b =', b, 'c =', c, 'args =', args, 'd = ', d, 'kw =', kw)  
 ```  
-**以上代码中：  
-**a和b是位置参数；  
-c是默认参数，仅在不对其输入时起作用；  
-args是可变参数：
+**以上代码中：**  
+**a和b是位置参数；**  
+**c是默认参数，仅在不对其输入时起作用；**  
+**args是可变参数：**
 ```python
 def calc(*numbers):
     sum = 0
@@ -35,4 +35,13 @@ def calc(*numbers):
     return sum
     
 calc(1, 2, 3)
+```  
+**```python*```分隔符后面的d是命名关键字参数，该参数必须传入参数名（在本小节开始的例子中，参数名是d）**  
+**kw是关键字参数**
+```python
+def person(name, age, **kw):
+    print('name:', name, 'age:', age, 'other:', kw)
+    
+>>> person('Adam', 45, gender='M', job='Engineer')
+name: Adam age: 45 other: {'gender': 'M', 'job': 'Engineer'}
 ```
