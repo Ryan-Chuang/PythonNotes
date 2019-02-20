@@ -8,7 +8,7 @@
   6. dict和set
 
 
-# Python数据类型  
+# Python基础  
 1. 整数、浮点数  
 **浮点数运算可能存在精度问题（四舍五入）**  
 **int(ele)：  将ele转换为int型**
