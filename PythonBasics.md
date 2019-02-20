@@ -22,7 +22,7 @@
 3. 字符编码
 **ord()函数获取字符的整数表示；chr()函数把编码转换为对应字符**
   
-4. list
+4. list  
 **索引从0开始；元素数据类型可以不同**  
 **list.append(): 表示在list末尾追加元素**  
 **list.insert（1， ele）： 表示在索引为1的位置处插入ele元素**  
@@ -33,10 +33,10 @@
 5. tuple  
 **tuple一旦初始化就不能修改。tuple所谓的“不变”是说，tuple的每个元素，指向永远不变。即指向'a'，就不能改成指向'b'，指向一个list，就不能改成指向其他对象，但指向的这个list本身是可变的！**
 
-6. 条件判断
-  if condition:
-    pass
-  elif condition:
+6. 条件判断  
+  if condition:  
+    pass  
+  elif condition:  
     pass
  
  7. 循环
