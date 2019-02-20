@@ -42,8 +42,10 @@
   ```
  
  7. 循环
-  `for x in ...:
-      pass`
+  ```python
+  for x in ...:
+      pass
+  ```
  
  
  
