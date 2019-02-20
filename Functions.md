@@ -46,6 +46,7 @@ def person(name, age, **kw):
 name: Adam age: 45 other: {'gender': 'M', 'job': 'Engineer'}
 ```  
 ### 3. 递归  
+**递归函数定义时，需要考虑栈溢出问题，采用尾递归（函数返回时，调用自身，return语句不含有表达式）**  
 ```python  
 def fact(n):
     return fact_iter(n, 1)
@@ -55,3 +56,4 @@ def fact_iter(num, product):
         return product
     return fact_iter(num - 1, num * product)
 ```
+### 4. 高阶函数  
