@@ -45,7 +45,11 @@
   ```python
   for x in ...:
       pass
-  ```
+  ```  
+ 8. dict和set
+ **dict的构成为：dic = {key: value}**  
+ **dict内部存放的顺序和key放入的顺序是没有关系的**
+ 
  
  
  
