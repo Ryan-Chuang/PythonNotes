@@ -9,7 +9,7 @@
 7. 装饰器  
 8. 偏函数
 ## Functions概要  
-1. 定义函数  
+### 1. 定义函数  
 ```python
 def my_abs(x):
     if x >= 0:
@@ -18,7 +18,7 @@ def my_abs(x):
         return -x, **2
 ```  
 **有时需要在定义函数时，对输入参数进行类型检查，用isinstance()实现**  
-2. 函数参数
+### 2. 函数参数
 ```python
 def f1(a, b, c=0, *args, *, d, **kw):
     print('a =', a, 'b =', b, 'c =', c, 'args =', args, 'd = ', d, 'kw =', kw)  
