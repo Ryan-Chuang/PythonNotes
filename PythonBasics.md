@@ -13,13 +13,13 @@
 **浮点数运算可能存在精度问题（四舍五入）**  
 **int(ele)：  将ele转换为int型**
   
-2. 字符串
+2. 字符串  
 **转义字符：  \ **  
 **不转义字符：   r''**  
 **表示多行内容：  '''...'''**  
 **str(ele)：  将ele转换为string型**  
 
-3. 字符编码
+3. 字符编码  
 **ord()函数获取字符的整数表示；chr()函数把编码转换为对应字符**
   
 4. list  
@@ -34,14 +34,14 @@
 **tuple一旦初始化就不能修改。tuple所谓的“不变”是说，tuple的每个元素，指向永远不变。即指向'a'，就不能改成指向'b'，指向一个list，就不能改成指向其他对象，但指向的这个list本身是可变的！**
 
 6. 条件判断  
-  if condition:  
+  `if condition:  
     pass  
   elif condition:  
-    pass
+    pass`
  
  7. 循环
-  for x in ...:
-      pass
+  `for x in ...:
+      pass`
  
  
  
