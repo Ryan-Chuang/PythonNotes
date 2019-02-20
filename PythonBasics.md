@@ -1,5 +1,5 @@
-#Python Basics Contents  
-Python基础主要包括以下几个部分：
+# Python Basics Contents  
+## Python基础主要包括以下几个部分：
   1. Python数据类型
   2. 字符串、编码
   3. list、tuple
@@ -8,16 +8,16 @@ Python基础主要包括以下几个部分：
   6. dict和set
 
 
-######Python数据类型######
-1. 整数、浮点数
-【浮点数运算可能存在精度问题（四舍五入）】
-【int(ele)：  将ele转换为int型】
-
+# Python数据类型  
+1. 整数、浮点数  
+**浮点数运算可能存在精度问题（四舍五入）**  
+**int(ele)：  将ele转换为int型**
+  
 2. 字符串
-【转义字符：  \ 】
-【不转义字符：   r''】
-【表示多行内容：  '''...'''】
-【str(ele)：  将ele转换为string型】
+**转义字符：  \ **  
+**不转义字符：   r''**  
+**表示多行内容：  '''...'''**  
+**str(ele)：  将ele转换为string型**
 
 3. 字符编码
 【ord()函数获取字符的整数表示；chr()函数把编码转换为对应字符】
