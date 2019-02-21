@@ -60,3 +60,8 @@ def fact_iter(num, product):
 ### 4. 高阶函数  
 **函数名是一种变量，而且函数的参数可以接收变量**
 #### map/reduce 函数
+```python
+>>> def f(x):
+       return x * x
+>>> r = map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+```
