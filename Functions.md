@@ -79,7 +79,7 @@ reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
 [5, 9, -12, -21, 36]
 ```  
 ### 5. 返回函数  
-**高阶函数除了可以接收函数作为参数外，还可以把函数作为结果返回**
+**高阶函数除了可以接收函数作为参数外，还可以把函数作为结果返回,这就是所谓的“闭包”**
 ```python
 def lazy_sum(*args):
     def sum():
@@ -88,9 +88,11 @@ def lazy_sum(*args):
             ax = ax + n
         return ax
     return sum
- >>>f = lazy_sum(1, 3, 5, 7, 9)
- >>>f
- <function lazy_sum.<locals>.sum at 0x101c6ed90>
- >>>f()
- 25
- ```
+>>>f = lazy_sum(1, 3, 5, 7, 9)
+>>>f
+<function lazy_sum.<locals>.sum at 0x101c6ed90>
+>>>f()
+25
+```
+**返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。**  
+### 6. 匿名函数  
