@@ -79,4 +79,4 @@ reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
 [5, 9, -12, -21, 36]
 ```  
 
-$\color{red}{红色字}$
+<font color=#FF0000>测试</font>
