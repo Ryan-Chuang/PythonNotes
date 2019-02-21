@@ -59,7 +59,7 @@ def fact_iter(num, product):
 ```
 ### 4. 高阶函数  
 **函数名是一种变量，而且函数的参数可以接收变量**
-#### <font color=#FF0000> map </font>  
+#### map、reduce函数 
 **map()函数接收两个参数，一个是function，一个是iterable（如list，tuple，dict，set，str等）序列，map()把函数依次作用到序列的每个元素，并把结果作为新的Iterator返回**
 ```python
 >>> def f(x):
@@ -78,4 +78,19 @@ reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
 >>> sorted([36, 5, -12, 9, -21], key=abs)
 [5, 9, -12, -21, 36]
 ```  
-
+### 5. 返回函数  
+**高阶函数除了可以接收函数作为参数外，还可以把函数作为结果返回**
+```python
+def lazy_sum(*args):
+    def sum():
+        ax = 0
+        for n in args:
+            ax = ax + n
+        return ax
+    return sum
+ >>>f = lazy_sum(1, 3, 5, 7, 9)
+ >>>f
+ <function lazy_sum.<locals>.sum at 0x101c6ed90>
+ >>>f()
+ 25
+ ```
