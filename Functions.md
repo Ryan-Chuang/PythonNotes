@@ -59,7 +59,7 @@ def fact_iter(num, product):
 ```
 ### 4. 高阶函数  
 **函数名是一种变量，而且函数的参数可以接收变量**
-<font color=#FF0000>#### map/reduce 函数</font>
+#### <font color=#FF0000>map/reduce 函数</font>
 **map()函数接收两个参数，一个是function，一个是iterable（如list，tuple，dict，set，str等）序列，map()把函数依次作用到序列的每个元素，并把结果作为新的Iterator返回**
 ```python
 >>> def f(x):
