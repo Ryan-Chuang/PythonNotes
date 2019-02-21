@@ -60,8 +60,22 @@ def fact_iter(num, product):
 ### 4. 高阶函数  
 **函数名是一种变量，而且函数的参数可以接收变量**
 #### map/reduce 函数
+**map()函数接收两个参数，一个是function，一个是iterable（如list，tuple，dict，set，str等）序列，map()把函数依次作用到序列的每个元素，并把结果作为新的Iterator返回**
 ```python
 >>> def f(x):
        return x * x
 >>> r = map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])
-```
+```  
+**reduce()函数是把函数作用在序列上，该函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算**
+```python
+reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
+```  
+#### filter函数  
+**filter()函数接收一个函数和一个序列，把函数依次作用于每个元素，根据返回值的True或False决定保留或丢弃该元素**  
+#### sorted函数  
+**sorted函数可以进行排序，而且可以接收一个key函数来实现自定义的排序**
+```python
+>>> sorted([36, 5, -12, 9, -21], key=abs)
+[5, 9, -12, -21, 36]
+```  
+
