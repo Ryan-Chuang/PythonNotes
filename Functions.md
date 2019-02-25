@@ -112,5 +112,13 @@ def lazy_sum(*args):
     def now():
     print('2015-3-25')
 ```
-**把```python\n@log```放在```python\nnow()```函数的定义处，相当于执行了```python\nnow = log(now)```**  
+**把```@log```放在```now()```函数的定义处，相当于执行了```now = log(now)```**  
+### 8. 偏函数  
+**偏函数functools.partial的作用是把一个函数的某些参数固定住，返回一个新函数，调用该新函数时更简单**  
+```python
+>>> import functools
+>>> int2 = functools.partial(int, base=2)
+>>> int2('1000000')
+64
+```  
 
