@@ -96,3 +96,20 @@ def lazy_sum(*args):
 ```
 **返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。**  
 ### 6. 匿名函数  
+```python
+>>> list(map(lambda x: x * x, [1, 2, 3, 4, 5, 6, 7, 8, 9]))
+[1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+**冒号前的x表示函数参数，返回值是该表达式的结果。**  
+### 7. 装饰器  
+```python
+>>> def log(func):
+    def wrapper(*args, **kw):
+        print('call %s():' % func.__name__)
+        return func(*args, **kw)
+    return wrapper
+>>> @log
+    def now():
+    print('2015-3-25')
+```
+**把```python @log```放在```python now()```函数的定义处，相当于执行了```python now = log(now)```  
