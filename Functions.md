@@ -112,5 +112,5 @@ def lazy_sum(*args):
     def now():
     print('2015-3-25')
 ```
-**把```python@log```放在```pythonnow()```函数的定义处，相当于执行了```pythonnow = log(now)```**  
+**把```python\n@log```放在```python\nnow()```函数的定义处，相当于执行了```python\nnow = log(now)```**  
 
