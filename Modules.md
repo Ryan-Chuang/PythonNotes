@@ -59,3 +59,16 @@ mycompany
 >>> od # OrderedDict的Key是有序的
 OrderedDict([('a', 1), ('b', 2), ('c', 3)])
 ```
+### ChainMap  
+**ChainMap是一个dict，可以实现把一组dict串起来。常用的场景是将命令行参数dict、环境变量dict和默认参数dict的合并，用于传入参数时按照ChainMap中的顺序依次查找并传入参数。**  
+### Counter  
+**Counter是一个计数器，用来跟踪值出现的次数。**
+```python
+>>> c = Counter("abcdefgab")
+>>> c["a"]
+2
+>>> c["c"]
+1
+>>> c["h"]
+0
+```
