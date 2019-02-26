@@ -35,3 +35,27 @@ mycompany
 >>> p.y
 2
 ```  
+### deque  
+**deque是一种双向序列，支持从任意一段增加和删除元素**  
+### defaultdict
+**与dict类似，defaultdict在key不存在时，返回一个默认值**  
+```python
+>>> from collections import defaultdict
+>>> dd = defaultdict(lambda: 'N/A')
+>>> dd['key1'] = 'abc'
+>>> dd['key1'] # key1存在
+'abc'
+>>> dd['key2'] # key2不存在，返回默认值
+'N/A'
+```
+### OrderedDict  
+**OrderedDict与dict的区别在于，前者保持了key的顺序**  
+```python
+>>> from collections import OrderedDict
+>>> d = dict([('a', 1), ('b', 2), ('c', 3)])
+>>> d # dict的Key是无序的
+{'a': 1, 'c': 3, 'b': 2}
+>>> od = OrderedDict([('a', 1), ('b', 2), ('c', 3)])
+>>> od # OrderedDict的Key是有序的
+OrderedDict([('a', 1), ('b', 2), ('c', 3)])
+```
