@@ -74,3 +74,16 @@ OrderedDict([('a', 1), ('b', 2), ('c', 3)])
 ```
 http://www.pythoner.com/205.html
 ## base64  
+**base64用64个字符表示任意二进制数据**  
+```python
+import base64
+
+st = 'hello world!'.encode()#默认以utf8编码
+res = base64.b64encode(st)
+print(res.decode())#默认以utf8解码
+res = base64.b64decode(res)
+print(res.decode())#默认以utf8解码
+
+aGVsbG8gd29ybGQh
+hello world!
+```
