@@ -87,3 +87,4 @@ print(res.decode())#默认以utf8解码
 aGVsbG8gd29ybGQh
 hello world!
 ```
+## struct  
