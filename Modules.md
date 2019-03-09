@@ -88,3 +88,8 @@ aGVsbG8gd29ybGQh
 hello world!
 ```
 ## struct  
+**用于解决bytes和其他二进制数据类型的转换。**  
+**pack函数用于把任意数据类型变成bytes。**  
+**unpack函数把bytes变成相应的数据类型。**  
+## hashlib  
+**hashlib提供了常见的摘要算法（哈希算法、散列算法），如MD5，SHA1等。通过一个函数，把任意长度的数据转换成一个长度固定的数据串。**  
