@@ -102,3 +102,16 @@ itertools.cycle()会把传入的一个序列无限重复下去；
 itertools.repeat()负责把一个元素无限重复下去，不过可以通过提供另一个参数来限定重复次数；  
 chain()可以把一组迭代对象串联起来；  
 groupby()把迭代器中相邻的重复元素挑出来放在一起；  
+## contextlib  
+contextlib主要用于实现上下文管理，与with...as...用法类似。  
+## urllib
+urllib用于操作URL。  
+# 常用第三方模块
+## pillow
+**pillow是用于图像处理的库。**  
+## requests
+**requests是第三方处理URL的库，比urllib更方便一些。**  
+## chardet
+**chardet是用于编码检测的库，这个检测所应用的场景是Python在对bytes进行转换成str时，需要预先知道bytes的编码方式。**  
+## psutil
+**psutil是获取系统信息的库，即process and system utilities。**  
