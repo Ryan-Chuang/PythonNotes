@@ -19,5 +19,6 @@
 
     def print_score(self):
         print('%s: %s' % (self.name, self.score))
- ```
-+ Student
+  ```
++ Student是类名，首字母大写。(object)表示该类是从哪个类继承下来的，如果没有合适的继承类，就可采用(object)类，这是所有类都会继承的类。
++ __init__是方法，方法的第一个参数总是self，表示创建的实例本身。创建实例的时候，self不需要传入。
