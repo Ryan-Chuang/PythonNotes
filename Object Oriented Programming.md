@@ -47,3 +47,28 @@ class Student(object):
           raise ValueError('bad score')
 ```
    + 如果不在类的内部采用私有变量，而通过外部设置类的变量，则比较容易传入无效的参数。
+# 继承和多态
++ 继承是指在定义一个class的时候，可以从某个现有的class继承，新的类称为子类（Subclass），被继承的类称为基类、父类或超类（Base class、Super class）。
+```python
+class Animal(object):
+    def run(self):
+        print('Animal is running...')
+
+class Dog(Animal):                  # 子类Dog继承了父类Animal的所有全部功能，如果Dog未定义run()方法，其拥有父类的run()方法
+    def run(self):                  # 当子类和父类都存在相同的run()方法时，子类的run()方法覆盖了父类的run()方法：多态
+        print('Dog is running...')
+    def eat(self):
+        print('Eating meat...')
+def run_twice(animal):              # 外部定义函数，接收Animal类的参数。所有数据类型是Animal类的参数都可以传入run_twice()函数
+    animal.run()
+    animal.run()
+>>> run_twice(Animal())
+Animal is running...
+Animal is running...
+>>> run_twice(Dog())
+Dog is running...
+Dog is running...
+```
++ 类是一种数据类型，与Python自带的str、list、dict等没有区别。
++ 对静态语言来说，如果需要传入Animal类型，则传入的对象必须是Animal类型或者它的子类，否则，将无法调用run()方法。
++ 对于Python这样的动态语言来说，则不一定需要传入Animal类型。我们只需要保证传入的对象有一个run()方法就可以了。
