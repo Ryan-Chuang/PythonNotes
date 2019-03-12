@@ -13,12 +13,37 @@
   ```python
   class Student(object):
 
-    def __init__(self, name, score):
-        self.name = name
-        self.score = score
+    def __init__(self, name_instance, score_instance):
+        self.name = name_instance
+        self.score = score_instance
 
     def print_score(self):
         print('%s: %s' % (self.name, self.score))
   ```
 + Student是类名，首字母大写。(object)表示该类是从哪个类继承下来的，如果没有合适的继承类，就可采用(object)类，这是所有类都会继承的类。
 + __init__是方法，方法的第一个参数总是self，表示创建的实例本身。创建实例的时候，self不需要传入。
+# 访问限制
++ 为了使得内部属性不被外部访问，可以把属性的名称前加上两个下划线__。表示该变量是一个私有变量（private），只有内部可以访问。
+```python
+class Student(object):
+
+    def __init__(self, name_instance, score_instance):
+        self.__name = name_instance      # 以__开头的变量表示私有变量，外部无法访问
+        self.__score = score_instance
+
+    def print_score(self):
+        print('%s: %s' % (self.__name, self.__score))
+        
+    def get_name(self):                  # 在类的内部定义方法，以访问私有变量
+        return self.__name
+
+    def get_score(self):
+        return self.__score
+        
+    def set_score(self, score):         # 在类的内部定义方法，以设置（修改）私有变量
+        if 0 <= score <= 100:
+          self.__score = score
+        else:
+          raise ValueError('bad score')
+```
+   + 如果不在类的内部采用私有变量，而通过外部设置类的变量，则比较容易传入无效的参数。
