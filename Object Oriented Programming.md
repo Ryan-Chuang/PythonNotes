@@ -72,3 +72,36 @@ Dog is running...
 + 类是一种数据类型，与Python自带的str、list、dict等没有区别。
 + 对静态语言来说，如果需要传入Animal类型，则传入的对象必须是Animal类型或者它的子类，否则，将无法调用run()方法。
 + 对于Python这样的动态语言来说，则不一定需要传入Animal类型。我们只需要保证传入的对象有一个run()方法就可以了。
+# 获取对象信息
++ type()
+  + type()函数用于判断对象类型，返回对应的class类型。如：
+    ```python
+    >>> type(123) == type(456)
+    True
+    >>> type('abc') == str
+    True
+    ```
+  + types模块中有一些常量可以判断对象是否是函数，如：
+    ```python
+    >>> import types
+    >>> def fn():
+            pass
+    >>> type(fn) == types.FunctionType
+    True
+    >>> type(abs) == types.BuiltinFunctionType
+    True
+    ```
++ isinstance()
+  + isinstance()函数可以判断class的类型。
+  + 使用type()判断的基本类型也可以用isinstance()来判断。如可以判断变量是否是某些类型中的一种。如：
+  ```python
+  >>>isinstance('a', str)
+  True
+  ```
++ dir()
+  + dir()函数用于获得一个对象的所有属性和方法。如：
+  ```python
+  >>> dir('ABC')
+  ['__add__', '__class__',..., '__subclasshook__', 'capitalize', 'casefold',..., 'zfill']
+  ```
+  + 配合getattr()、setattr()以及hasattr()，可以直接操作一个对象的状态
