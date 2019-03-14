@@ -105,3 +105,17 @@ Dog is running...
   ['__add__', '__class__',..., '__subclasshook__', 'capitalize', 'casefold',..., 'zfill']
   ```
   + 配合getattr()、setattr()以及hasattr()，可以直接操作一个对象的状态
+# 实例属性和类属性
++ 由于Python是动态语言，因此根据类创建的实例可以任意绑定属性。如：
+  ```python
+  class Student(object):
+    def __init__(self, name):
+        self.name = name
+
+  s = Student('Bob')
+  s.score = 90
+  print(s.name)
+  print(s.score)
+  ```
++ 写程序的时候，千万不要对实例属性和类属性使用相同的名字。
+  
