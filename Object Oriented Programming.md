@@ -146,4 +146,24 @@ Dog is running...
   ```
 + 需要注意的是，__slots__定义的属性仅对当前class实例起作用，对继承的子类无效。
 # 使用@property
-+ 
++ Python内置的@property装饰器负责把一个方法变成属性调用。在实现参数检查并用类似属性的方式访问类的变量时尤其有用。如：
+  ```python
+  class Student(object):
+    @property             # 将下面的score getter方法变成属性
+    def score(self):
+        return self._score
+    @score.setter         # 将下面的score setter方法变成属性
+    def score(self, value):
+        if not isinstance(value, int):
+            raise ValueError('score must be an integer!')
+        if value < 0 or value > 100:
+            raise ValueError('score must between 0 ~ 100!')
+        self._score = value
+  >>> s = Student()
+  >>> s.score = 60
+  >>> s.score = 9999
+  Traceback (most recent call last):
+  ...
+  ValueError: score must between 0 ~ 100!
+  ```
+  + 上述方法也可以使用get_score()和set_score()的方法来实现，但会略显复杂。
