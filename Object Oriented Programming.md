@@ -4,6 +4,12 @@
 3. 继承和多态
 4. 获取对象信息
 5. 实例属性和类属性
+6. 使用__slots__限制实例属性
+7. 使用@property
+8. 多重继承
+9. 定制类
+10. 使用枚举类
+11. 使用元类
 # 面向对象编程的概念
 + 面向对象编程——Object Oriented Programming，简称OOP，是一种程序设计思想。OOP把对象作为程序的基本单元，一个对象包含了数据和操作数据的函数。
 + 面向过程的程序设计把计算机程序视为一系列的命令集合，即一组函数的顺序执行。为了简化程序设计，面向过程把函数继续切分为子函数，即把大块函数通过切割成小块函数来降低系统的复杂度。
@@ -118,4 +124,26 @@ Dog is running...
   print(s.score)
   ```
 + 写程序的时候，千万不要对实例属性和类属性使用相同的名字。
-  
+# 使用__slots__限制实例属性
++ 如前所述，Python允许动态绑定实例属性和方法，如：
+  ```python
+  >>> class Student(object):
+        pass
+  >>> s = Student()
+  >>> s.name = 'Michael'
+  >>> def set_age(self, age):
+        self.age = age
+  >>> from types import MethodType
+  >>> s.set_age = MethodType(set_age, s)    # 给实例绑定方法
+  >>> s.set_age(25)
+  >>> Student.set_age = set_age             # 给class绑定方法
+  ```
+  事实上，给类绑定方法可以直接定义在类中。
++ 如果想只允许对实例绑定部分属性，如name和age属性：
+  ```python
+  class Student(object):
+    __slots__ = ('name', 'age')   # 用tuple定义允许绑定的属性名称
+  ```
++ 需要注意的是，__slots__定义的属性仅对当前class实例起作用，对继承的子类无效。
+# 使用@property
++ 
