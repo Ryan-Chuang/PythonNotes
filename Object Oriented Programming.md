@@ -167,3 +167,21 @@ Dog is running...
   ValueError: score must between 0 ~ 100!
   ```
   + 上述方法也可以使用get_score()和set_score()的方法来实现，但会略显复杂。
+# 多重继承
+  + 多重继承是指一个子类可以继承多个父类的所有功能，如：
+    ```python
+    class Animal(object):
+    pass
+    # 大类:
+    class Mammal(Animal):
+        pass
+    class RunnableMixIn(object):
+        pass
+    # 子类
+    class Dog(Mammal, RunnableMixIn):
+        pass
+    ```
+  + 通常，类的继承关系的主线是单一的，如上述的Dog继承自Mammal，而RunnableMixIn则是混入的额外功能。MixIn即表示多重继承来组合的功能。
+# 定制类
+  + 
+
