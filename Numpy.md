@@ -11,3 +11,15 @@
     lbd_target_index = np.where(lbd0 == lbd_target)[0][0]         # np.where()返回的是tuple,第一个[0]取tuple的array，第二个[0]取array的数值。
     print(lbd0[lbd_target_index])
     
+### 数据操作问题
+```python
+>>> a = [1, 2]
+>>> a
+>>> [1, 2]
+>>> b = a
+>>> b[1] = 1
+>>> b
+>>> [1, 1]
+>>> a
+>>> [1, 1]
+```
